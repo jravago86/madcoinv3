@@ -2,7 +2,7 @@
 MadcoinCoin [MDC] Source Code
 ================================
 
-http://www.madcoin.lfe
+http://www.madcoin.life
 
 
 Copyright (c) 2009-2015 Bitcoin Core Developers
