@@ -85,6 +85,7 @@ public:
     int nLastScanningErrorBlockHeight;
     int64_t nLastPaid;
     bool isPortOpen;
+    bool isOldNode;
 
     CMasternode();
     CMasternode(const CMasternode& other);
@@ -121,6 +122,7 @@ public:
         swap(first.nLastScanningErrorBlockHeight, second.nLastScanningErrorBlockHeight);
         swap(first.nLastPaid, second.nLastPaid);
         swap(first.isPortOpen, second.isPortOpen);
+        swap(first.isOldNode, second.isOldNode);
     }
 
     CMasternode& operator=(CMasternode from)
@@ -171,6 +173,7 @@ public:
                 READWRITE(nLastScanningErrorBlockHeight);
                 READWRITE(nLastPaid);
                 READWRITE(isPortOpen);
+                READWRITE(isOldNode);
         }
     )
 
@@ -193,7 +196,10 @@ public:
         isPortOpen = status;
     }
 
-
+    void ChangeNodeStatus(bool status)
+    {
+        isOldNode = status;
+    }
     
     inline uint64_t SliceHash(uint256& hash, int slice)
     {
