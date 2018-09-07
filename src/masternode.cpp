@@ -120,6 +120,7 @@ CMasternode::CMasternode(const CMasternode& other)
     nLastPaid = other.nLastPaid;
     nLastPaid = GetAdjustedTime();
     isPortOpen = other.isPortOpen;
+    isOldNode = other.isOldNode;
 }
 
 CMasternode::CMasternode(CService newAddr, CTxIn newVin, CPubKey newPubkey, std::vector<unsigned char> newSig, int64_t newSigTime, CPubKey newPubkey2, int protocolVersionIn, CScript newRewardAddress, int newRewardPercentage)
