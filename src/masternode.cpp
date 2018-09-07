@@ -90,6 +90,7 @@ CMasternode::CMasternode()
     //mark last paid as current for new entries
     nLastPaid = GetAdjustedTime();
     isPortOpen = true;
+    isOldNode = true;
 }
 
 CMasternode::CMasternode(const CMasternode& other)
